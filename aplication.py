@@ -40,7 +40,7 @@ def main():
         model = load_model()
         input_data = np.array([[crim, zn, indus, chas, nox, rm, age, dis, rad, tax, ptratio, b, lstat]])
         prediction = model.predict(input_data)
-        st.markdown(f"### Precio estimado de la vivienda: **${prediction:.4f}**")
+        st.markdown(f"### Precio estimado de la vivienda: **${prediction}:.4f**")
 
 if __name__ == "__main__":
     main()
