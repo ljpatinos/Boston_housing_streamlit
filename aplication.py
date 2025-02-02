@@ -15,6 +15,8 @@ def main():
         '<h1 style="color: #4CAF50; text-align: center;">Predicción de Precios de Casas (Boston Housing)</h1>',
         unsafe_allow_html=True
     )
+
+    st.markdown("El mejor modelo de regresión obtenido presentalas siguientes características KernelRidge, Scaler: StandardScaler, alpha=0.1, kernel='rbf' y MAE=0.7414")
     
     st.markdown("Ingrese las características de la casa para predecir su precio:")
     
@@ -38,7 +40,7 @@ def main():
         model = load_model()
         input_data = np.array([[crim, zn, indus, chas, nox, rm, age, dis, rad, tax, ptratio, b, lstat]])
         prediction = model.predict(input_data)
-        st.markdown(f"### Precio estimado de la vivienda: **${prediction}**")
+        st.markdown(f"### Precio estimado de la vivienda: **${prediction:.4f}**")
 
 if __name__ == "__main__":
     main()
