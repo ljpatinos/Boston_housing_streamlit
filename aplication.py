@@ -4,7 +4,7 @@ import pickle
 import gzip
 
 def load_model():
-    filename = "boston_housing_model.pkl.gz"
+    filename = "model_trained_regressor.pkl.gz"
     with gzip.open(filename, 'rb') as f:
         model = pickle.load(f)
     return model
